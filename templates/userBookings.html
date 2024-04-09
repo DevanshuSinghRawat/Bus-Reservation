@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block start %}
+<h2>My Bookings </h2>
+            {% if data %}
+                    <table border="1">
+        <thead>
+            <tr>
+                <td> User id </td>
+                <td> User name </td>
+                <td> Booking ID </td>
+                <td> Seats Booked </td>
+                <td> Status </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dta in data %}
+            <tr>
+                <td> {{dta.userid}} </td>
+                <td> {{dta.user_name}} </td>
+                <td> {{dta.booking_id_id}} </td>
+                <td> {{dta.req_seats}} </td>
+                <td {% if dta.status == 'Booked' %} style="background-color: #2cdb2c;" {% else %} style="background-color: red;" {% endif %} > {{ dta.status }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+                    </table>
+            {% else %}
+            <h2> Else parrt </h2>
+            {% endif %}
+            {% endblock %}

@@ -1,0 +1,54 @@
+
+div.homeinfo {
+    padding: 2px;
+    margin: 5px auto;
+    display: list-item;
+}
+
+.homeinfo-item {
+    position: relative;
+    padding: 2dvh;
+    margin: 2dvh;
+    width: 70dvw;
+    border: 2px solid rgb(47, 47, 164);
+    border-radius: 5px;
+    display: flex;
+}
+.item-abstract {
+    position: relative;
+    margin: 2dvh;
+    padding: 2dvh;
+    width: 20dvw;
+    font-size: 2rem;
+    color: rgb(47, 47, 164);
+    display: inline;
+    border: 2px solid rgb(47, 47, 164);
+    border-radius: 0 5dvw 5dvw 0;
+    border-left: 0;
+}
+.item-info {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(47, 47, 164);
+    display: inline;
+    margin: auto;
+    align-self: flex-start;
+}
+
+/* tables */
+table {
+    border: none;
+    width: 60dvw;
+}
+thead {
+    font-weight: bold;
+}
+tbody > tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.nameInitial {
+    color: rgb(188, 90, 162);
+    background-color: cadetblue;
+    width: 20px;
+}

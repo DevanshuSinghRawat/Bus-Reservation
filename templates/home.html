@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+
+{% block start %}
+
+{% if user_name != '' %}
+    <h2 style="display: inline; float: inline-end;"> {{user_name}} </h2>
+    
+    <div class="nameInitial" style="color: rgb(188, 90, 162); background-color: cadetblue; width: fit-content;
+    padding: 5px; font-weight: bold; font-size: 2rem; border-radius: 50%; display: inline; float: inline-end;" > {{ nameInitial }} </div>
+{% endif %}
+
+<div class="homeinfo">
+
+    <div class="homeinfo-item">
+        <div class="item-abstract">
+            1000+ Users
+        </div>
+        <div class="item-info">
+            More than 1000 users actively using our services
+        </div>
+    </div>
+    
+    <div class="homeinfo-item">
+        <div class="item-abstract">
+            23 + 4
+        </div>
+        <div class="item-info">
+            Services available in 23 States and 4 UTs
+        </div>
+    </div>
+    
+    <div class="homeinfo-item">
+        <div class="item-abstract">
+            480+ Cities
+        </div>
+        <div class="item-info">
+            Earned customer trust in 480+ cities all across India
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

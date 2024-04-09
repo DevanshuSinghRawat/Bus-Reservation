@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+</head>
+<body>
+    <center>
+    <form action="" class="feedback" method="post">
+        {% csrf_token %}
+        <label> Feedback </label>
+        <textarea placeholder="Your feedback...">
+
+        </textarea><br/>
+        <button type="reset"> Clear </button>
+        <button type="submit"> Send </button>
+    </form>
+    </center>
+</body>
+</html>

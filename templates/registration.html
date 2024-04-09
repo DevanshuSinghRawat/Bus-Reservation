@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!-- SECOND WAY TO ADD CSS WITH DJANGO -->
+    {% load static %}
+    <link rel="stylesheet" href="/static/login.css">  
+
+</head>
+<body>
+    <form name="registration" class="registration" method="post" action="{%url 'registration' %}" >
+        {% csrf_token %}
+        <h2> Registration </h2>
+        <label for="email"> Email ID </label>   <br>
+        <input name="email" type="email">
+        <br>
+        <br>
+        <label for="name"> User Name </label>   <br>
+        <input name="name" type="text">
+        <br>
+        <br>
+        <label for="pswd1"> Password </label>   <br>
+        <input id="pswd1" name="pswd1" type="password">
+        <br>
+        <br>
+        <label for="pswd2"> Retype Password </label>   <br>
+        <input id="pswd2" name="pswd2" type="password">
+        <br>
+        <br>
+        <button id="sBtn" type="submit"> Register </button>
+        <button> <a href="/login/"> Have Account </a> </button>
+        <br>
+    </form>
+
+    {% if pswd_error %}
+    <center>
+        <h1 class="error">
+            {{ pswd_error }}
+        </h1>
+    </center>
+    {% endif %}
+</body>
+</html>

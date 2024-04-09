@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        BusRes
+        
+        <nav class="navbar">
+            <a href="{% url 'logout' %}">Logout</a>
+            <a href="/registration/"> Signup </a>
+            <a href="/showBuses/"> Show Buses </a>
+            <a href="/userBookings/"> My Bookings </a>
+            <a href="/feedback/"> Feedback </a>
+        </nav>
+    </div>
+    <hr>
+    <center>
+    {% block start %}
+
+    {% endblock %}
+    </center>
+</body>
+</html>

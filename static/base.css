@@ -1,0 +1,27 @@
+.header {
+    background: blueviolet;
+    font-size: 2.5rem;
+    color: white;
+    width: 100dvw;
+    height: 20dvh;
+    padding: 2vmin;
+}
+.navbar {
+    align-self: baseline;
+    width: 70dvw;
+    display: flex;
+    align-items: center;
+    padding: auto;
+
+}
+a {
+    margin: auto auto;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    border: 2px solid white;
+    border-radius: 5px;
+    scale: 1.5;
+}

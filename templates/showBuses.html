@@ -1,0 +1,67 @@
+
+    {% extends "base.html" %}
+
+    {% block start %}
+
+    <form method="post" action="{%url 'showBuses' %}">
+        {% csrf_token %}
+        <legend for="source_search"> Source </legend>
+        <input type="search" name="source_search">
+        <br/>
+        <button type="submit"> Search </button>
+    </form>
+    <h2> 
+        {% if passedInfo %}
+        USER: {{passedInfo.user_name}} <br>
+        USER_ID: {{passedInfo.userid}}
+        {% endif %}
+    </h2>
+    <center>
+        {% if source_search %}
+            <h1> You searched for {{source_search}} </h1>
+            <form method="post" action="{% url 'makeBookings' %}" >
+                {% csrf_token %}
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Seats</th>
+                        <th>Price</th>
+                        <th>Required seats</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for info in data %}
+                    <tr >
+                        <td>{{ info.id }}</td>
+                        <td>{{ info.busName }}</td>
+                        <td>{{ info.busType }}</td>
+                        <td>{{ info.source }}</td>
+                        <td>{{ info.destination }}</td>
+                        <td>{{ info.date }}</td>
+                        <td>{{ info.time }}</td>
+                        <td>{{ info.seats }}</td>
+                        <td>{{ info.price }}</td>
+                        <td> <input type="number" name="req_seats" value="1"> </td>
+                        <td> <button type="submit" value={{info.id}} name="selected_bus"> Book </button> </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </form>
+            <!-- {% for info in data %} -->
+                <!-- {{info.source}} - {{info.destination}} <br/> -->
+            <!-- {% endfor %} -->
+        {% else %}
+        <h1> Search For Your Bus :) </h1>
+        {% endif %}
+    </center>
+
+    {% endblock %}

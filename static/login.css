@@ -1,0 +1,43 @@
+form {
+    position: relative;
+    width: 40vmin;
+    border-radius: 10vmin;
+    margin: auto auto;
+    padding: 15vmin ;
+    background-image: linear-gradient(blueviolet, rgb(240, 50, 202));
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+label {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 1px 20px;
+}
+input {
+    width: 100%;
+    height: 20px;
+    border-radius: 0 0 10px 10px;
+    border: none;
+}
+button {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.feedback {
+    width: 40%;
+    height: 60dvh;
+}
+textarea {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.error {
+    border: 2px solid red;
+    border-radius: 5px;
+    width: 50dvw;
+    padding: 10dvh;
+}
